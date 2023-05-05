@@ -1,8 +1,8 @@
 export default class Cell {
-    static width = 10;
-    static height = 10;
+    static width = 5;
+    static height = 5;
     static aliveColor = "#101bed"
-    static unaliveColor = "#e51313"
+    static unaliveColor = "#41e513"
 
     constructor(context, gridX, gridY, alive = false) {
         this.context = context;

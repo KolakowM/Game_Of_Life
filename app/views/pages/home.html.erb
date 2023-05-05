@@ -1,14 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
 
+<div class="container-lg" style="margin:50px, 140px, 50px, 20px">
+<h1>Game of Life</h1>
+
+<div >
 <%= content_tag(:div, nil, data: {
-  controller: "life",
+  controller: "life"
 }) do %>
     <%= content_tag(:canvas, nil, data: {
       life_target: "canvas"
     }) %>
   <br/>
-  <%= button_tag "Start", data: { action: "click->life#start"} , id: "start_button" %>
-  <%= button_tag "Clear", data: { action: "click->life#clear"} %>
-  <%= button_tag "Random", data: { action: "click->life#random"} %>
+  <%= button_tag "Start", data: { action: "click->life#start"} , id: "start_button", class:"btn btn-success" %>
+  <%= button_tag "Clear", data: { action: "click->life#clear"} , class:"btn btn-primary" %>
+  <%= button_tag "Random", data: { action: "click->life#random"} , class:"btn btn-dark" %>
 <% end %>
+  </div>
+</div>
